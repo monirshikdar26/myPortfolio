@@ -36,28 +36,29 @@
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
+            <a class="nav-link js-scroll active" href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
+            <a class="nav-link js-scroll" href="{{url('/about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Services</a>
+            <a class="nav-link js-scroll" href="{{url('/services')}}">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
+            <a class="nav-link js-scroll" href="{{url('/work')}}">Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Blog</a>
+            <a class="nav-link js-scroll" href="{{url('/blog')}}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
+            <a class="nav-link js-scroll" href="{{url('/contact')}}">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!--/ Nav End /-->
+@yield('content')
 
     <!-- JavaScript Libraries -->
   <script src={{asset('lib/jquery/jquery.min.js')}}></script>
@@ -69,9 +70,9 @@
   <script src={{asset('lib/counterup/jquery.counterup.js')}}></script>
   <script src={{asset('lib/owlcarousel/owl.carousel.min.js')}}></script>
   <script src={{asset('lib/lightbox/js/lightbox.min.js')}}></script>
-  <script src={{'lib/typed/typed.min.js'}}></script>
+  <script src={{asset('lib/typed/typed.min.js')}}></script>
 
    <!-- Main Javascript File -->
-   <script src="js/main.js"></script>
+   <script src={{asset('js/main.js')}}></script>
 </body>
 </html>
